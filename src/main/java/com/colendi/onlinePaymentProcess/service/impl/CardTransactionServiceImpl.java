@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 import javax.transaction.Transactional;
 
 @Service
-public class CardTransactionImpl implements CardTransactionService {
+public class CardTransactionServiceImpl implements CardTransactionService {
     @Autowired
     private CardTransactionRepository cardTransactionRepository;
 
