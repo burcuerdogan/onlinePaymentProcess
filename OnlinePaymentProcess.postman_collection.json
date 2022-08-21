@@ -44,7 +44,17 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": ""
+					"raw": "http://localhost:8080/api/getCardsByUserId/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"getCardsByUserId",
+						"1"
+					]
 				}
 			},
 			"response": []
@@ -85,7 +95,18 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": ""
+					"raw": "http://localhost:8080/api/reissueCard/1/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"reissueCard",
+						"1",
+						"1"
+					]
 				}
 			},
 			"response": []

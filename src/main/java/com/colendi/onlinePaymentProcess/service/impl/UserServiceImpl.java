@@ -83,7 +83,6 @@ public class UserServiceImpl implements UserService {
             reissuedCard.setIsCancelled(false);
 
             Set<Card> cards = user.get().getCards();
-            cards.add(reissuedCard);
 
             Optional<Card> userCard = cards.stream().filter(x -> x.getId().equals(cardId)).findFirst();
             if (!userCard.isPresent()) {
