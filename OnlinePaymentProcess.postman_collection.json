@@ -1,0 +1,205 @@
+{
+	"info": {
+		"_postman_id": "13c709d8-9c3c-4499-a652-9f06e15fc76d",
+		"name": "OnlinePaymentProcess",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getCardById",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "ty://?Page=Product&ContentId=1925865&CampaignId=439892&MerchantId=105064",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/getCardById/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"getCardById",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCardsByUuserId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createCard",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"expiryDate\": \"2024-10-10\",\r\n    \"cvv\": \"000\",\r\n    \"isCancelled\": false,\r\n    \"merchantIds\": [\r\n        7,\r\n        8\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/createCard/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"createCard",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "reissueCard",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cancelCard",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/cancelCard/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"cancelCard",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "spendFromCard",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"spendAmount\" : 1200.0,\r\n\"merchantId\" : 2,\r\n\"cardId\" : 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/spendFromCard/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"spendFromCard",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addBalanceToUserGPA",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"balance\" : 1000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/addBalanceToUserGPA/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"addBalanceToUserGPA",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addLimitScope",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"cardId\" : 38,\r\n\"mcc\" : \"BDU\",\r\n\"mid\" : 16\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/addLimitScope/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"addLimitScope",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
