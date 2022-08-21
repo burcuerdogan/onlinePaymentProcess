@@ -85,7 +85,14 @@ public class UserServiceImpl implements UserService {
             Set<Card> cards = user.get().getCards();
             cards.add(reissuedCard);
 
-            cardService.cancelCard(cardId);
+            Optional<Card> userCard = cards.stream().filter(x -> x.getId().equals(cardId)).findFirst();
+            if (!userCard.isPresent()) {
+                throw new Exception("User's card does not exist");
+            } else {
+                userCard.get().setIsCancelled(true);
+                cards.add(reissuedCard);
+            }
+
             userRepository.save(user.get());
             return mapper.map(user.get(), UserDTO.class);
         } else {
@@ -99,7 +106,7 @@ public class UserServiceImpl implements UserService {
 
         Optional<User> user = userRepository.findById(userId);
         if (user.isPresent()) {
-            return mapper.map(user, UserDTO.class);
+            return mapper.map(user.get(), UserDTO.class);
         } else {
             throw new Exception("User does not exist");
         }

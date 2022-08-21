@@ -26,7 +26,7 @@ public class Card {
     @Column(name = "is_canceled")
     private Boolean isCancelled;
 
-    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(name = "card_merchant_map",
     joinColumns = {@JoinColumn(name = "card_id", foreignKey = @ForeignKey(name = "FKCARD"))},
     inverseJoinColumns = {@JoinColumn(name = "merchant_id", foreignKey = @ForeignKey(name = "FKMERCHANT"))})
