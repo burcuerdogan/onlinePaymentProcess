@@ -11,7 +11,7 @@ public class CardValidator implements BaseValidator<Card> {
     @Override
     public void validator(Card card) throws Exception {
         if (Objects.isNull(card) && Objects.isNull(card.getId())){
-            throw new Exception("card or card ıd cannot be null");
+            throw new Exception("Card or card id cannot be null");
         }
     }
 }

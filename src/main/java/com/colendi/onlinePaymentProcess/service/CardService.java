@@ -2,9 +2,6 @@ package com.colendi.onlinePaymentProcess.service;
 
 import com.colendi.onlinePaymentProcess.dto.CardDTO;
 import com.colendi.onlinePaymentProcess.dto.LimitScopeDTO;
-import com.colendi.onlinePaymentProcess.response.CardResponse;
-
-import java.util.List;
 
 public interface CardService {
 

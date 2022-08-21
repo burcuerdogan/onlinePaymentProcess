@@ -1,6 +1,5 @@
 package com.colendi.onlinePaymentProcess.request;
 
-import com.colendi.onlinePaymentProcess.dto.MerchantDTO;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;

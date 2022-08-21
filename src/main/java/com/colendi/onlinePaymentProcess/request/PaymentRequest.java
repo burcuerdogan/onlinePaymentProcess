@@ -8,7 +8,10 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 public class PaymentRequest {
+
     private Double spendAmount;
+
     private Long merchantId;
+
     private Long cardId;
 }
